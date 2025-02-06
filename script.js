@@ -69,4 +69,12 @@ function pickRandom() {
 
 
 
-const arr = ["22A91A61D1", "22A91A61F4", "22A91A61E5"];
+
+
+
+
+
+
+
+
+var arr = ["22A91A61D1", "22A91A61F4", "22A91A61E5"];
