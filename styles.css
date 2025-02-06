@@ -82,6 +82,7 @@
    margin-top: 70px;
     border-radius: 30px;
     background-color: beige;
+    cursor: pointer;
 }
 #generate_task_button {
     text-align: center;
