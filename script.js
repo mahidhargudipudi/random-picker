@@ -55,7 +55,7 @@ function pickRandom() {
     resultContainer.textContent = "The random roll number is:  __________";
 
     const fun = () => {
-        marked.push([..., arr]);
+        marked.push([...arr]);
     }
     setTimeout(() => {
         resultContainer.textContent = "The random roll number is: " + randomOption;
