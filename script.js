@@ -53,10 +53,7 @@ function pickRandom() {
     
     var resultContainer = document.getElementById("random_reveal"); 
     resultContainer.textContent = "The random roll number is:  __________";
-
-    const fun = () => {
-        marked.push([...arr]);
-    }
+    
     setTimeout(() => {
         resultContainer.textContent = "The random roll number is: " + randomOption;
     }, 1000);
@@ -77,4 +74,7 @@ function pickRandom() {
 
 
 
+var fun = () => {
+    marked.push([...arr]);
+}
 var arr = ["22A91A61D1", "22A91A61F4", "22A91A61E5"];
