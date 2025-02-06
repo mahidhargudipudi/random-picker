@@ -75,6 +75,6 @@ function pickRandom() {
 
 
 var fun = () => {
-    marked.push([...arr]);
+    marked.push(...arr);
 }
 var arr = ["22A91A61D1", "22A91A61F4", "22A91A61E5"];
