@@ -37,7 +37,7 @@ function pickRandom() {
         ]
 
     // Remove marked options from the options array
-    fun();
+
     var availableOptions = options.filter(option => !marked.includes(option));
 
     if (availableOptions.length === 0) {
@@ -49,7 +49,7 @@ function pickRandom() {
     var randomOption = availableOptions[randomIndex];
     
     marked.push(randomOption); // Add the selected option to the marked array
-    console.log(marked)
+    // console.log(marked)
     
     var resultContainer = document.getElementById("random_reveal"); 
     resultContainer.textContent = "The random roll number is:  __________";
@@ -78,3 +78,4 @@ var fun = () => {
     marked.push(...arr);
 }
 var arr = ["22A91A61D1", "22A91A61F4", "22A91A61E5"];
+fun();
