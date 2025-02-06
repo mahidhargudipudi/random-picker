@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form_validation</title>
+    <style>
+        *{
+            font-family: comic sans MS;
+        }
+        .main{
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .main form label{
+            margin: 10px;
+            height: 40px;
+            width: 200px;
+        }
+        .main form input{
+            margin: 5px;
+            height: 30px;
+            width: 400px;
+        }
+        .main form button{
+            margin: 20px;
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form action="" id="myForm">
+            <label for="">enter your name</label><br>
+            <input type="text" name="" id="fName"><br>
+            <label for="">enter email</label><br>
+            <input type="email" name="" id="fMail"><br>
+            <label for="">enter password</label><br>
+            <input type="password" name="" id="fPass"><br>
+            <label for="">my_radio</label><br>
+            <input type="radio" id="fRadio"><br>
+            <label for="">checkbox</label><br>
+            <input type="checkbox" id="fCheck"><br>
+            <label for="">enter dob</label><br>
+            <input type="date" name="" id="fDate"><br><br>
+
+
+            <button onclick="validateForm()">submit</button>
+        </form>
+    </div>
+</body>
+<script>
+    function validateForm(){
+        let a = document.forms["myForm"]["fName"].value
+        let b = document.forms["myForm"]["fMail"].value
+        let c = document.forms["myForm"]["fPass"].value
+        let d = document.forms["myForm"]["fRadio"].value
+        let e = document.forms["myForm"]["fCheck"].value
+        let f = document.forms["myForm"]["fDate"].value
+         
+        const arr = [a,b,c,d,e,f]
+        var cnt = 0;
+        arr.forEach(element => {
+            if (element == ""){
+                cnt += 1;
+            }
+        });
+        if (cnt > 0){
+            alert("cant be empty");
+        }
+    }
+</script>
+</html>

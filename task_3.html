@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Table Example</title>
+</head>
+<body>
+
+  <table id="data-table" border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>AGE</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const data = [
+      { id: 1, name: 'one', age: '19' },
+      { id: 2, name: 'someone', age: '20' },
+      { id: 3, name: 'others', age: '21' }
+    ];
+    function populateTable() {
+      const tableBody = document.querySelector('#data-table tbody');
+      tableBody.innerHTML = '';
+      data.map(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item.id}</td>
+          <td>${item.name}</td>
+          <td>${item.age}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', populateTable);
+  </script>
+
+</body>
+</html>

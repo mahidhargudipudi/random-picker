@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample_task</title>
+    <style>
+        .container{
+            width: 500px;
+            height: auto;
+        }
+        .res_container{
+            width: 500px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label id="l1" for="one">one</label>
+        <input type="checkbox" onclick="fun()" id="c1">
+        <label id="l2" for="two">two</label>
+        <input type="checkbox" id="c2" onclick="fun()">
+        <label id="l3" for="three">three</label>
+        <input type="checkbox" id="c3" onclick="fun()">
+        <label id="l4" for="four">four</label>
+        <input type="checkbox" id="c4" onclick="fun()">
+    </div>
+    <div class="res_container"></div>
+</body>
+<script>
+    function fun(){
+        e1 = document.getElementById("c1");
+        e2 = document.getElementById("c2");
+        e3 = document.getElementById("c3");
+        e4 = document.getElementById("c4");
+        le1 = document.getElementById("l1");
+        le2 = document.getElementById("l2");
+        le3 = document.getElementById("l3");
+        le4 = document.getElementById("l4");
+        const arr = [e1,e2,e3,e4];
+        const l_arr = [le1,le2,le3,le4];
+        var ele = document.getElementsByClassName("res_container");
+        for (i = 0 ; i < arr.length; i++){
+            if(arr[i].checked == true){
+                for(j = 0 ;j < i ; j++){
+                    arr[j].checked = true;
+                } 
+            }
+        }
+        console.log(arr.length);
+    }
+</script>
+</html>
