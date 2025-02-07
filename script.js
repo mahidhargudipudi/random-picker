@@ -49,7 +49,7 @@ function pickRandom() {
     var randomOption = availableOptions[randomIndex];
     
     marked.push(randomOption); // Add the selected option to the marked array
-    // console.log(marked)
+    console.log(marked)
     
     var resultContainer = document.getElementById("random_reveal"); 
     resultContainer.textContent = "The random roll number is:  __________";
